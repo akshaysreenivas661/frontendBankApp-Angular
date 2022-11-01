@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 bg-light border rounded-3 m-4 p-5">
+        <div class="d-flex justify-content-center rounded-5">
+            <img src="../../assets/images/bank-03.jpg" alt="" height="100px" width="100px">
+        </div>
+        <h1 class="mb-4 text-center">My Bank</h1>
+        <h6 class="text-center">{{aim}}</h6>
+        <input (change)="acnoChange($event)" type="text" id="login_acno" class="form-control mb-1 " [placeholder]="accounts">
+        <input (change)="pswdChange($event)" type="password" id="login_pswd" class="form-control" placeholder="Password">
+        <button type="button" class="form-control btn btn-info mt-4" (click)="Login()">Login</button>
+        <a href="#">Forgot password?</a> Or <a href="./signup.html">Sign Up</a>
+    </div>
+    <div class="col-4"></div>
+</div>
