@@ -1,0 +1,42 @@
+<div class="parent">
+    <h1>Welcome {{user}}
+    </h1>
+    <a routerLink="/transaction">View transaction details</a>
+    <div class="child ">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 bg-light border rounded-3 m-4 p-5">
+                <div class="d-flex justify-content-center">
+                    <img src="../../assets/images/bank-03.jpg" alt="" height="100px" width="100px">
+                </div>
+                <h1 class="mb-4 text-center">Deposit</h1>
+                <input [(ngModel)]="acno" type="text" id="depo_acno" class="form-control mb-1" placeholder="Account number">
+                <input [(ngModel)]="pswd" type="password" id="depo_pswd" class="form-control mb-1" placeholder="Password">
+                <input [(ngModel)]="amount" type="text" id="depo_amount" class="form-control mb-1" placeholder="Amount">
+                <button type="submit" class="form-control btn btn-info mt-4" (click)="deposit()">Submit</button>
+                <!-- <a routerLink="">Sign In</a> -->
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+
+    <div class="child">
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 bg-light border rounded-3 m-4 p-5">
+        <div class="d-flex justify-content-center">
+            <img src="../../assets/images/bank-03.jpg" alt="" height="100px" width="100px">
+        </div>
+        <h1 class="mb-4 text-center">Withdraw</h1>
+        <input [(ngModel)]="acno" type="text" id="with_acno" class="form-control mb-1" placeholder="Account number">
+        <input [(ngModel)]="pswd" type="password" id="with_pswd" class="form-control mb-1" placeholder="Password">
+        <input [(ngModel)]="amount1" type="text" id="with_amount1" class="form-control mb-1" placeholder="Amount">
+        <button type="submit" class="form-control btn btn-info mt-4" (click)="withdraw()">Submit</button>
+        <!-- <a routerLink="">Sign In</a> -->
+    </div>
+    <div class="col-4"></div>
+</div>
+    </div>
+</div>
+
+

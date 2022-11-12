@@ -1,3 +1,20 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">My Bank</a>
+      <form class="d-flex input-group w-auto">
+        <input
+          type="search"
+          type="search"
+          class="form-control rounded"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search"></i>
+        </span>
+      </form>
+    </div>
+  </nav>
 <div class="row">
     <div class="col-4"></div>
     <div class="col-4 bg-light border rounded-3 m-4 p-5">
@@ -6,10 +23,10 @@
         </div>
         <h1 class="mb-4 text-center">My Bank</h1>
         <h6 class="text-center">{{aim}}</h6>
-        <input (change)="acnoChange($event)" type="text" id="login_acno" class="form-control mb-1 " [placeholder]="accounts">
-        <input (change)="pswdChange($event)" type="password" id="login_pswd" class="form-control" placeholder="Password">
+        <input [(ngModel)]="acno" type="text" id="login_acno" class="form-control mb-1 " [placeholder]="accounts">
+        <input [(ngModel)]="pswd" type="password" id="login_pswd" class="form-control" placeholder="Password">
         <button type="button" class="form-control btn btn-info mt-4" (click)="Login()">Login</button>
-        <a href="#">Forgot password?</a> Or <a href="./signup.html">Sign Up</a>
+        <a href="#">Forgot password?</a> Or <a routerLink="register">Sign Up</a>
     </div>
     <div class="col-4"></div>
 </div>

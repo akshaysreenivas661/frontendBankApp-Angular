@@ -1,0 +1,59 @@
+data binding - sharing data inside a component
+1.one way binding
+    html->ts or ts->html
+    ts- component
+    html- view
+    
+    1.1component to view (ts->html)
+        a) string interpolation-{{expression}}
+        b) property binding-[attribute name]="property
+        
+    1.2view to component(html->ts)
+        a)event binding- (event name)="function name()" 
+        b)event binding using $(event)-(event name)="function name($event)"
+        c)event binding using template reference variable- #variable name
+
+
+2 Two way binding
+    
+
+
+
+
+Angular routing 
+    -To set path for a component
+
+    {
+        path:value, component:class name
+    }
+
+    use <router-outlet></router-outlet>  inside root component
+
+dependency injection
+-------------------
+to share data b/w dependent classes
+
+    
+Angular services
+----------------
+ng g s servicename    
+
+Angular Directives
+------------------
+To manipulate DOM elements
+
+a) component Directives
+
+b)Structural Directives
+    1)ngFor
+
+
+Angular Forms
+-------------
+a)Template Driven Forms(First design html) -html page designing
+b)Model Driven Forms(first ts file -> html design) -Adv validation methods
+    1)Reactive Forms
+        -form group, array, control
+        -we can directly add validation methods
+            ->Add validation
+            ->import reactive forms modules
