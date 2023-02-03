@@ -1,32 +1,32 @@
-<nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand">My Bank</a>
-      <form class="d-flex input-group w-auto">
-        <input
-          type="search"
-          type="search"
-          class="form-control rounded"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <span class="input-group-text border-0" id="search-addon">
-          <i class="fas fa-search"></i>
-        </span>
-      </form>
-    </div>
-  </nav>
-<div class="row">
-    <div class="col-4"></div>
-    <div class="col-4 bg-light border rounded-3 m-4 p-5">
-        <div class="d-flex justify-content-center rounded-5">
-            <img src="../../assets/images/bank-03.jpg" alt="" height="100px" width="100px">
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">My Bank</a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="container">
+    
+    
+        <div class="image">
+            <img src="../../assets/images/R.png" alt="">
         </div>
-        <h1 class="mb-4 text-center">My Bank</h1>
+        <h1 class="txt">My Bank</h1>
         <h6 class="text-center">{{aim}}</h6>
-        <input [(ngModel)]="acno" type="text" id="login_acno" class="form-control mb-1 " [placeholder]="accounts">
-        <input [(ngModel)]="pswd" type="password" id="login_pswd" class="form-control" placeholder="Password">
-        <button type="button" class="form-control btn btn-info mt-4" (click)="Login()">Login</button>
+        <form [formGroup]="loginForm" class="p-3 mt-3">
+          <div class="txt_field">
+        <input formControlName="acno" type="text" id="login_acno" class="form-control " [placeholder]="accounts"></div>
+        <div *ngIf="this.loginForm.get('acno')?.touched&&this.loginForm.get('acno')?.errors" style="color: red;">Invalid acno</div>
+        <div class="txt_field">
+        <input formControlName="pswd" type="password" id="login_pswd" class="form-control" placeholder="Password"></div>
+        <div *ngIf="this.loginForm.get('pswd')?.touched&&this.loginForm.get('pswd')?.errors" style="color: red;">Invalid password</div>
+       <div class="d-grid gap-2">
+        <button type="button" class="btn1" (click)="Login()">Login</button></div>
+        </form>
+        <div class="pass">
         <a href="#">Forgot password?</a> Or <a routerLink="register">Sign Up</a>
-    </div>
-    <div class="col-4"></div>
+        </div>
+    
 </div>

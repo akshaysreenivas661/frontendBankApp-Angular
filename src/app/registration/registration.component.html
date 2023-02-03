@@ -1,18 +1,25 @@
-<div class="row">
-    <div class="col-4"></div>
-    <div class="col-4 bg-light border rounded-3 m-4 p-5">
-        <div class="d-flex justify-content-center">
-            <img src="../../assets/images/bank-03.jpg" alt="" height="100px" width="100px">
+<div class="container">
+        <div class="image">
+            <img src="../../assets/images/R.png" alt="">
         </div>
-        <h1 class="mb-4 text-center">My Bank</h1>
+        <h1 class="txt">My Bank</h1>
         <!-- property binding[form group] -->
         <form [formGroup]="registerForm" class="p-3 mt-3">
-        <input formControlName="uname" type="text" id="reg_uname" class="form-control mb-1" placeholder="Username">
-        <input formControlName="acno" type="text" id="reg_acno" class="form-control mb-1" placeholder="Account number">
+            <div class="txt_field">
+        <input formControlName="uname" type="text" id="reg_uname" class="form-control mb-1" placeholder="Username"></div>
+        <div *ngIf="this.registerForm.get('uname')?.touched&&this.registerForm.get('uname')?.errors" style="color: red;">Invalid Username</div>
+        <div class="txt_field">
+        <input formControlName="acno" type="text" id="reg_acno" class="form-control mb-1" placeholder="Account number"></div>
+        <div *ngIf="this.registerForm.get('acno')?.touched&&this.registerForm.get('acno')?.errors" style="color: red;">Invalid accountno</div>
+        <div class="txt_field">
         <input formControlName="pswd" type="password" id="reg_pswd" class="form-control" placeholder="Password">
-        <button type="submit" class="form-control btn btn-info mt-4" (click)="Register()">Submit</button>
+        </div>
+        <div *ngIf="this.registerForm.get('pswd')?.touched&&this.registerForm.get('pswd')?.errors" style="color: red;">Invalid password</div>
+        <div class="d-grid gap-2">
+        <button type="submit" class="btn1" (click)="Register()">Submit</button>
+        </div>
         </form>
+        <div class="pass">
         <a routerLink="">Sign In</a>
-    </div>
-    <div class="col-4"></div>
+        </div>
 </div>

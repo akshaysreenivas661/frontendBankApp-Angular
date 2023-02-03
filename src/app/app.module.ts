@@ -8,6 +8,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TransactionComponent } from './transaction/transaction.component';
+import { DeleteComponent } from './delete/delete.component';
+import { HttpClientModule } from '@angular/common/http' ;
 
 @NgModule({
   declarations: [
@@ -15,13 +17,15 @@ import { TransactionComponent } from './transaction/transaction.component';
     LoginComponent,
     DashboardComponent,
     RegistrationComponent,
-    TransactionComponent
+    TransactionComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

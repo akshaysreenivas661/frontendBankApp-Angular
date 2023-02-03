@@ -46,7 +46,7 @@ a) component Directives
 
 b)Structural Directives
     1)ngFor
-
+    2)ngIf- validation
 
 Angular Forms
 -------------
@@ -57,3 +57,29 @@ b)Model Driven Forms(first ts file -> html design) -Adv validation methods
         -we can directly add validation methods
             ->Add validation
             ->import reactive forms modules
+
+
+Local storage
+    -setItem
+    -setItem
+    -removeItem
+
+
+Parent child relationship
+    parent to child communication - @Input()
+    Child to parent communication - @Output()
+
+Angular pipes
+    {{value-expression | date [:format [timezone]] }}
+
+Frontend and backend Integration
+    import HTTPClientModule - for creating http request
+    inject HttpClient
+    using httpclientmodule - for making API requests
+        
+Asynchronous call
+        RxJs - Reactive Extension for JavaScript
+        To solve asynchronous request events
+    1) observable (Alternative of promise)
+        a) Resolve - subscribe()
+        b) Reject - catch()
